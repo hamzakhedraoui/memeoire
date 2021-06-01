@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <title>Wcare</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Wcare</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/patient/search">Search</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/patient/opointemets">Appointments</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/patient/mycabine">Cabine</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/patient/medical">medical files</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Edit Profile
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="dropdown-item" href="/patient/edit/account">Account</a></li>
+                        <li><a class="dropdown-item" href="/patient/edit/general">General</a></li>
+                    </ul>
+                </li>
+                <div align="right">
+                    <li class="nav-item">
+                        <a class="nav-link"href="/logout">Logout</a>
+                    </li>
+                </div>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container">
+    <form action="#" th:action="@{/patient/search/p}" th:object="${search}"
+          method="post">
+        <br/>
+        <div class="form-group mb-3">
+            <label for="city">City :</label> <br>
+            <br/>
+            <select class="form-control col-md-12" id="city" th:field="*{city}"  name="city">
+                <option th:value="'all'" th:text="all"></option>
+                <option th:value="'Adrar'" th:text="Adrar"></option>
+                <option th:value="'Chlef'" th:text="Chlef"></option>
+                <option th:value="'Laghouat'" th:text="Laghouat"></option>
+                <option th:value="'Oum-El-Bouaghi'" th:text="Oum-El-Bouaghi"></option>
+                <option th:value="'Batna'" th:text="Batna"></option>
+                <option th:value="'Bejaia'" th:text="Bejaia"></option>
+                <option th:value="'Biskra'" th:text="Biskra"></option>
+                <option th:value="'Bechar'" th:text="Bechar"></option>
+                <option th:value="'Blida'" th:text="Blida"></option>
+                <option th:value="'Bouira'" th:text="Bouira"></option>
+                <option th:value="'Tamanrasset'" th:text="Tamanrasset"></option>
+                <option th:value="'Tebessa'" th:text="Tebessa"></option>
+                <option th:value="'Tlemcen'" th:text="Tlemcen"></option>
+                <option th:value="'Tiaret'" th:text="Tiaret"></option>
+                <option th:value="'Tizi-Ouzou'" th:text="Tizi-Ouzou"></option>
+                <option th:value="'Alger'" th:text="Alger"></option>
+                <option th:value="'Djelfa'" th:text="Djelfa"></option>
+                <option th:value="'Jijel'" th:text="Jijel"></option>
+                <option th:value="'Setif'" th:text="Setif"></option>
+                <option th:value="'Saida'" th:text="Saida"></option>
+                <option th:value="'Skikda'" th:text="Skikda"></option>
+                <option th:value="'Sidi-Bel-Abbes'" th:text="Sidi-Bel-Abbes"></option>
+                <option th:value="'Annaba'" th:text="Annaba"></option>
+                <option th:value="'Guelma'" th:text="Guelma"></option>
+                <option th:value="'Constantine'" th:text="Constantine"></option>
+                <option th:value="'Medea'" th:text="Medea"></option>
+                <option th:value="'Mostaganem'" th:text="Mostaganem"></option>
+                <option th:value="'Msila'" th:text="Msila"></option>
+                <option th:value="'Mascara'" th:text="Mascara"></option>
+                <option th:value="'Ouargla'" th:text="Ouargla"></option>
+                <option th:value="'Oran'" th:text="Oran"></option>
+                <option th:value="'El-Bayadh'" th:text="El-Bayadh"></option>
+                <option th:value="'Illizi'" th:text="Illizi"></option>
+                <option th:value="'Bordj-Bou-Arreridj'" th:text="Bordj-Bou-Arreridj"></option>
+                <option th:value="'Boumerdes'" th:text="Boumerdes"></option>
+                <option th:value="'El-Tarf'" th:text="El-Tarf"></option>
+                <option th:value="'Tindouf'" th:text="Tindouf"></option>
+                <option th:value="'Tissemsilt'" th:text="Tissemsilt"></option>
+                <option th:value="'El-Oued'" th:text="El-Oued"></option>
+                <option th:value="'Khenchela'" th:text="Khenchela"></option>
+                <option th:value="'Souk-Ahras'" th:text="Souk-Ahras"></option>
+                <option th:value="'Tipaza'" th:text="Tipaza"></option>
+                <option th:value="'Mila'" th:text="Mila"></option>
+                <option th:value="'Ain-Defla'" th:text="Ain-Defla"></option>
+                <option th:value="'Naama'" th:text="Naama"></option>
+                <option th:value="'Ain-Temouchent'" th:text="Ain-Temouchent"></option>
+                <option th:value="'Ghardaia'" th:text="Ghardaia"></option>
+                <option th:value="'Relizane'" th:text="Relizane"></option>
+                <option th:value="'El-Mghair'" th:text="El-Mghair"></option>
+                <option th:value="'El-Menia'" th:text="El-Menia"></option>
+                <option th:value="'Ouled-Djellal'" th:text="Ouled-Djellal"></option>
+                <option th:value="'Bordj-Baji-Mokhtar'" th:text="Bordj-Baji-Mokhtar"></option>
+                <option th:value="'Beni-Abbes'" th:text="Beni-Abbes"></option>
+                <option th:value="'Timimoun'" th:text="Timimoun"></option>
+                <option th:value="'Touggourt'" th:text="Touggourt"></option>
+                <option th:value="'Djanet'" th:text="Djanet"></option>
+                <option th:value="'In-Salah'" th:text="In-Salah"></option>
+                <option th:value="'In-Guezzam'" th:text="In-Guezzam"></option>
+            </select>
+        </div>
+        <br/>
+        <div class="form-group mb-3">
+            <label for="speciality">speciality :</label> <br>
+            <br/>
+            <select class="form-control col-md-12" id="speciality" th:field="*{speciality}"  name="speciality">
+                <option th:value="'all'" th:text="all"></option>
+                <option th:value="'allergologie'" th:text="allergologie"></option>
+                <option th:value="'cardiologie'" th:text="cardiologie"></option>
+                <option th:value="'chirurgie'" th:text="chirurgie"></option>
+                <option th:value="'dermatologie'" th:text="dermatologie"></option>
+                <option th:value="'endocrinologie'" th:text="endocrinologie"></option>
+                <option th:value="'gastro-enterologie'" th:text="gastro-entérologie"></option>
+                <option th:value="'gynecologie'" th:text="gynecologie"></option>
+                <option th:value="'hematologie'" th:text="hematologie"></option>
+                <option th:value="'hepatologie'" th:text="hépatologie"></option>
+                <option th:value="'infectiologie'" th:text="Infectiologie"></option>
+                <option th:value="'medecine-interne'" th:text="medecine-interne"></option>
+                <option th:value="'nephrologie'" th:text="nephrologie"></option>
+                <option th:value="'neurologie'" th:text="neurologie"></option>
+                <option th:value="'oncologie'" th:text="oncologie"></option>
+                <option th:value="'ophtalmologie'" th:text="ophtalmologie"></option>
+                <option th:value="'orthopedie'" th:text="orthopedie"></option>
+                <option th:value="'oto-rhino-laryngologie'" th:text="Oto-rhino-laryngologie"></option>
+                <option th:value="'pediatrie'" th:text="pediatrie"></option>
+                <option th:value="'pneumologie'" th:text="pneumologie"></option>
+                <option th:value="'psychiatrie'" th:text="psychiatrie"></option>
+                <option th:value="'radiotherapie'" th:text="radiothérapie"></option>
+                <option th:value="'rhumatologie'" th:text="rhumatologie"></option>
+                <option th:value="'urologie'" th:text="urologie"></option>
+            </select>
+        </div>
+        <div align="center">
+            <button  type="submit" class="btn btn-outline-dark">Search</button>
+        </div>
+    </form>
+    <br/>
+    <br/>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col" th:each="cabine : ${cabineIlnes}">
+            <div class="card text-white bg-dark  mb-3" style="max-width: 18rem;">
+                <div class="card-header" th:text="${cabine.name}">name</div>
+                <div class="card-body text-white">
+                    wilaya : <h5 class="card-title" th:text="${cabine.city}">city</h5>
+                    address : <p class="card-text" th:text="${cabine.address}">address</p>
+                    phone : <p class="card-text" th:text="${cabine.phone}">phone</p>
+                    about us : <p class="card-text" th:text="${cabine.about_us}">about us</p>
+                    <a href="#" class="card-link">Contact</a>
+                    <a th:href="'/subscribe/' + ${cabine.id}" class="card-link">Subscribe</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+</body>
+</html>

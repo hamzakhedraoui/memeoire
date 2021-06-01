@@ -1,0 +1,56 @@
+CREATE USER 'sysadmin'@'localhost' IDENTIFIED BY 'abcdef';
+GRANT ALL PRIVILEGES ON * . * TO 'sysadmin'@'localhost';
+FLUSH PRIVILEGES;
+
+create database wcare;
+use wcare;
+create table account(
+    id int primary key auto_increment,
+    email varchar(60) NOT NULL UNIQUE,
+    password varchar(30) NOT NULL,
+    type varchar(30));
+
+create table patient(
+    id int primary key auto_increment,
+    account_id int NOT NULL,
+    cabine_id int,
+    first_name varchar(30),
+    last_name varchar(30),
+    city varchar(30),
+    chronic_incess varchar(200));
+
+create table cabine(
+    id int primary key auto_increment,
+    account_id int NOT NULL,
+    name varchar(30),
+    phone varchar(30),
+    city varchar(30),
+    address varchar(100),
+    about_us varchar(200));
+
+create table ilness_to_cure(
+    id int primary key auto_increment,
+    cabin_id int NOT NULL,
+    ilness varchar(30));
+
+create table appointments(
+    id int primary key auto_increment,
+    cabin_id int NOT NULL,
+    patient_id i nt NOT NULL,
+    hour int,
+    minute int,
+    day int,
+    month int,
+    year int,
+    new_opointement int,
+    to_update int,
+    request int,
+    history int);
+
+create table medical_record(
+    id int primary key auto_increment,
+    cabin_id int,
+    patient_id int,
+    description varchar(100),
+    date varchar(100),
+    visible int);
