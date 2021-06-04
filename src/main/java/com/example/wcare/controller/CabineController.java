@@ -14,6 +14,7 @@ import org.springframework.web.servlet.ModelAndView;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @Controller
@@ -239,7 +240,7 @@ public class CabineController {
         List<MedicalRecord> medicalRecords = medicalRecordService.listAll();
         List<MedicalRecord> myRecords = new ArrayList<>();
         for(MedicalRecord medicalRecord:medicalRecords){
-            if(medicalRecord.getCabineId()==Integer.parseInt(account_id) && medicalRecord.getPatientId()==id){
+            if(medicalRecord.getCabineId()==Integer.parseInt(account_id) && medicalRecord.getPatientId()==id && medicalRecord.getVisible()==1){
                 myRecords.add(medicalRecord);
             }
         }
@@ -250,14 +251,37 @@ public class CabineController {
     @RequestMapping(value = "/cabine/medicalfile/create/{id}")
     public String addRecord(@PathVariable(name = "id") int id,Model model,HttpSession session) {
         String account_id = (String) session.getAttribute("account");
-        List<MedicalRecord> medicalRecords = medicalRecordService.listAll();
-        List<MedicalRecord> myRecords = new ArrayList<>();
-        for(MedicalRecord medicalRecord:medicalRecords){
-            if(medicalRecord.getCabineId()==Integer.parseInt(account_id) && medicalRecord.getPatientId()==id){
-                myRecords.add(medicalRecord);
-            }
-        }
-        model.addAttribute("records",myRecords);
-        return "c_medical_records";
+        MedicalRecord medicalRecord = new MedicalRecord();
+        medicalRecord.setCabineId(Integer.parseInt(account_id));
+        medicalRecord.setPatientId(id);
+        model.addAttribute("records",medicalRecord);
+        return "c_new_record";
+    }
+    @RequestMapping(value = "/cabine/medical/save", method = RequestMethod.POST)
+    public String saveRecord(@ModelAttribute("records") MedicalRecord medicalRecord) {
+        Date date = new Date();
+        medicalRecord.setDate(date.toString());
+        medicalRecord.setVisible(1);
+        medicalRecordService.save(medicalRecord);
+        return "redirect:/cabine/medicalfile/"+medicalRecord.getPatientId();
+    }
+    @RequestMapping(value = "/cabine/medicalfile/update/{id}")
+    public String updateRecord(@PathVariable(name = "id") int id,Model model,HttpSession session) {
+        String account_id = (String) session.getAttribute("account");
+        MedicalRecord medicalRecord = medicalRecordService.get(id);
+        model.addAttribute("records",medicalRecord);
+        return "c_edit_record";
+    }
+    @RequestMapping(value = "/cabine/medical/edit", method = RequestMethod.POST)
+    public String editRecord(@ModelAttribute("records") MedicalRecord medicalRecord) {
+        medicalRecord.setVisible(1);
+        medicalRecordService.save(medicalRecord);
+        return "redirect:/cabine/medicalfile/"+medicalRecord.getPatientId();
+    }
+    @RequestMapping(value = "/cabine/medicalfile/delete/{id}")
+    public String deleteRecord(@PathVariable(name = "id") int id,Model model,HttpSession session) {
+        long patient_id = medicalRecordService.get(id).getPatientId();
+        medicalRecordService.delete(id);
+        return "redirect:/cabine/medicalfile/"+patient_id;
     }
 }

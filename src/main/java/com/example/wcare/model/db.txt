@@ -49,8 +49,8 @@ create table appointments(
 
 create table medical_record(
     id int primary key auto_increment,
-    cabin_id int,
+    cabine_id int,
     patient_id int,
-    description varchar(100),
+    description varchar(300),
     date varchar(100),
     visible int);

@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-    <title>Wcare</title>
+    <title>WCare</title>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -46,29 +46,19 @@
     </div>
 </nav>
 <div class="container">
-    <form action="#" th:action="@{/patient/gedit}" th:object="${patient}"
-          method="post">
-        <input type="hidden" th:field="*{id}">
-        <input type="hidden" th:field="*{account_id}">
-        <div class="mb-3">
-            <label for="firstname" class="form-label">First Name</label>
-            <input type="text" class="form-control" th:field="*{first_name}" id="firstname">
+    </br>
+    <div th:each="record : ${records}">
+        <div class="card text-center">
+            <div class="card-header">
+                <p th:text="'#'+${record.id}"></p>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title" th:text="'date: ' + ${record.date}"></h5>
+                <p class="card-text" th:text="'descreption: ' + ${record.description}"></p>
+            </div>
         </div>
-        <div class="mb-3">
-            <label for="last_name" class="form-label">Last Name</label>
-            <input type="text" class="form-control" th:field="*{last_name}" id="last_name">
-        </div>
-        <div class="mb-3">
-            <label for="city" class="form-label">City</label>
-            <input type="text" class="form-control" th:field="*{city}" id="city">
-        </div>
-        <div class="mb-3">
-            <label for="chronic_ilness" class="form-label">Chronic Ilness</label>
-            <textarea id="chronic_ilness" class="form-control" th:field="*{chronic_incess}" name="chronic_ilness" rows="4" cols="50">
-            </textarea>
-        </div>
-        <button type="submit" class="btn btn-outline-dark">Save</button>
-    </form>
+        <br/>
+    </div>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
 </body>

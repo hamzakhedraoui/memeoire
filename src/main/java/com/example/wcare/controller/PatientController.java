@@ -23,18 +23,20 @@ public class PatientController {
     private CabineService cabineService;
     private IlnessToCureService ilnessToCureService;
     private OpointementService opointementService;
-
+    private MedicalRecordService medicalRecordService;
     @Autowired
     public PatientController(AccountService accountService,
                              PatientService patientService,
                              CabineService cabineService,
                              IlnessToCureService ilnessToCureService,
-                             OpointementService opointementService){
+                             OpointementService opointementService,
+                             MedicalRecordService medicalRecordService){
         this.accountService = accountService;
         this.patientService = patientService;
         this.cabineService = cabineService;
         this.ilnessToCureService = ilnessToCureService;
         this.opointementService = opointementService;
+        this.medicalRecordService = medicalRecordService;
     }
 
     @RequestMapping("/patient/search")
@@ -316,6 +318,21 @@ public class PatientController {
         Patient patient = getMyAccount(Integer.parseInt(account_id));
         patient.setCabine_id(0);
         return "redirect:/patient/search";
+    }
+    //****************************************************************************************************************
+    //Medical records functionalities
+    @RequestMapping(value = "/patient/medicalfile/")
+    public String MedicalRecords(Model model,HttpSession session) {
+        String account_id = (String) session.getAttribute("account");
+        List<MedicalRecord> medicalRecords = medicalRecordService.listAll();
+        List<MedicalRecord> myRecords = new ArrayList<>();
+        for(MedicalRecord medicalRecord:medicalRecords){
+            if(medicalRecord.getPatientId()==Integer.parseInt(account_id)){
+                myRecords.add(medicalRecord);
+            }
+        }
+        model.addAttribute("records",myRecords);
+        return "p_medical_records";
     }
     //***************************************************************************************************************
     public Patient getMyAccount(int id){
