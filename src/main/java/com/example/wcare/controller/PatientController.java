@@ -189,6 +189,10 @@ public class PatientController {
     @RequestMapping("/patient/opointemets")
     public String Opointements(Model model, HttpSession session) {
         String account_id = (String) session.getAttribute("account");
+        Patient patient = getMyAccount(Integer.parseInt(account_id));
+        if(patient.getCabine_id() == 0) {
+            return "redirect:/patient/search";
+        }
         List<Appointments> appointments = opointementService.listAll();
         List<Appointments> myApp = new ArrayList<>();
         List<Appointments> history = new ArrayList<>();
@@ -246,10 +250,13 @@ public class PatientController {
     public String saveProduct(Model model,HttpSession session) {
         String account_id = (String) session.getAttribute("account");
         Patient patient = getMyAccount(Integer.parseInt(account_id));
+        Cabine cabine = getCabineAccount(patient.getCabine_id());
         Appointments appointments = new Appointments();
         appointments.setId(0);
         appointments.setCabinId(patient.getCabine_id());
         appointments.setPatientId(patient.getAccount_id());
+        appointments.setFullname(""+patient.getFirst_name()+" "+patient.getLast_name());
+        appointments.setCabinename(cabine.getName());
         appointments.setHour(0);
         appointments.setMinute(0);
         appointments.setDay(1);
@@ -335,9 +342,17 @@ public class PatientController {
         return "p_medical_records";
     }
     //***************************************************************************************************************
-    public Patient getMyAccount(int id){
+    public Patient getMyAccount(long id){
         List<Patient> patients = patientService.listAll();
         for(Patient p : patients) {
+            if (p.getAccount_id()==id)
+                return p;
+        }
+        return null;
+    }
+    public Cabine getCabineAccount(long id){
+        List<Cabine> cabines = cabineService.listAll();
+        for(Cabine p : cabines) {
             if (p.getAccount_id()==id)
                 return p;
         }

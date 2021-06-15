@@ -36,7 +36,9 @@ create table ilness_to_cure(
 create table appointments(
     id int primary key auto_increment,
     cabin_id int NOT NULL,
-    patient_id i nt NOT NULL,
+    patient_id int NOT NULL,
+    fullname varchar(100),
+    cabinename varchar(100),
     hour int,
     minute int,
     day int,
@@ -54,3 +56,11 @@ create table medical_record(
     description varchar(300),
     date varchar(100),
     visible int);
+
+create table Message(
+    id int primary key auto_increment,
+    cabine_id int,
+    patient_id int,
+    sender int,
+    message varchar(300),
+    date varchar(100));

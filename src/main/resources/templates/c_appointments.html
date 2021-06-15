@@ -24,9 +24,6 @@
         <li class="nav-item">
           <a class="nav-link" href="/cabine/opointemets">appointments</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link"href="/cabine/medical">medical files</a>
-        </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Edit Profile
@@ -55,6 +52,7 @@
     <thead>
     <tr>
       <th>ID</th>
+      <th>Full Name</th>
       <th>hour</th>
       <th>minute</th>
       <th>day</th>
@@ -66,6 +64,7 @@
     <tbody>
     <tr th:each="appointment : ${appointments}">
       <td th:text="${appointment.patientId}">id</td>
+      <td th:text="${appointment.fullname}">id</td>
       <td th:text="${appointment.hour}">id</td>
       <td th:text="${appointment.minute}">id</td>
       <td th:text="${appointment.day}">id</td>
@@ -84,6 +83,7 @@
     <thead>
     <tr>
       <th>ID</th>
+      <th>Full Name</th>
       <th>hour</th>
       <th>minute</th>
       <th>day</th>
@@ -95,6 +95,7 @@
     <tbody>
     <tr th:each="appointment : ${request}">
       <td th:text="${appointment.patientId}">id</td>
+      <td th:text="${appointment.fullname}">id</td>
       <td th:text="${appointment.hour}">id</td>
       <td th:text="${appointment.minute}">id</td>
       <td th:text="${appointment.day}">id</td>
@@ -113,6 +114,7 @@
     <thead>
     <tr>
       <th>ID</th>
+      <th>Full Name</th>
       <th>hour</th>
       <th>minute</th>
       <th>day</th>
@@ -124,6 +126,7 @@
     <tbody>
     <tr th:each="appointment : ${toBeChanged}">
       <td th:text="${appointment.patientId}">id</td>
+      <td th:text="${appointment.fullname}">id</td>
       <td th:text="${appointment.hour}">id</td>
       <td th:text="${appointment.minute}">id</td>
       <td th:text="${appointment.day}">id</td>
@@ -142,6 +145,7 @@
     <thead>
     <tr>
       <th>ID</th>
+      <th>Full Name</th>
       <th>hour</th>
       <th>minute</th>
       <th>day</th>
@@ -152,6 +156,7 @@
     <tbody>
     <tr th:each="appointment : ${history}">
       <td th:text="${appointment.patientId}">id</td>
+      <td th:text="${appointment.fullname}">id</td>
       <td th:text="${appointment.hour}">id</td>
       <td th:text="${appointment.minute}">id</td>
       <td th:text="${appointment.day}">id</td>

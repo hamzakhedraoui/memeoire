@@ -191,6 +191,7 @@ public class CabineController {
     public ModelAndView addAppointment(@PathVariable(name = "id") int id,Model model,HttpSession session) {
         ModelAndView mav = new ModelAndView("c_new_appointment");
         Appointments appointments = opointementService.get(id);
+        System.out.println("appointment 1 : "+appointments);
         mav.addObject("appointments", appointments);
         return mav;
     }
@@ -200,6 +201,7 @@ public class CabineController {
         appointments.setToUpdate(0);
         appointments.setRequest(0);
         appointments.setNewOpointement(1);
+        System.out.println("appointment 2 : "+appointments);
         opointementService.save(appointments);
         return "redirect:/cabine/opointemets";
     }

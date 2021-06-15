@@ -24,9 +24,6 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/cabine/opointemets">Opointments</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link"href="/cabine/medical">medical files</a>
-                </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Edit Profile
@@ -49,38 +46,11 @@
 <div class="container">
     <form action="#" th:action="@{/cabine/appointment/save}" th:object="${appointments}"
           method="post">
-<!--        <div class="form-group mb-3">
-            <label for="city">Hour :</label> <br>
-            <select class="form-control col-md-12" id="city" th:field="*{hour}"  name="city">
-                <option th:value="'1'" th:text="1"></option>
-                <option th:value="'2'" th:text="2"></option>
-                <option th:value="'3'" th:text="3"></option>
-                <option th:value="'4'" th:text="4"></option>
-                <option th:value="'5'" th:text="5"></option>
-                <option th:value="'6'" th:text="6"></option>
-                <option th:value="'7'" th:text="7"></option>
-                <option th:value="'8'" th:text="8"></option>
-                <option th:value="'9'" th:text="9"></option>
-                <option th:value="'10'" th:text="10"></option>
-                <option th:value="'11'" th:text="11"></option>
-                <option th:value="'12'" th:text="12"></option>
-                <option th:value="'13'" th:text="13"></option>
-                <option th:value="'14'" th:text="14"></option>
-                <option th:value="'15'" th:text="15"></option>
-                <option th:value="'16'" th:text="16"></option>
-                <option th:value="'17'" th:text="17"></option>
-                <option th:value="'18'" th:text="18"></option>
-                <option th:value="'19'" th:text="19"></option>
-                <option th:value="'20'" th:text="20"></option>
-                <option th:value="'21'" th:text="21"></option>
-                <option th:value="'22'" th:text="22"></option>
-                <option th:value="'23'" th:text="23"></option>
-                <option th:value="'24'" th:text="24"></option>
-            </select>
-        </div>-->
         <input type="hidden" th:field="*{id}" th:value="*{id}">
         <input type="hidden" th:field="*{cabinId}" th:value="*{cabinId}">
         <input type="hidden" th:field="*{patientId}" th:value="*{patientId}">
+        <input type="hidden" th:field="*{cabinename}" th:value="*{cabinename}">
+        <input type="hidden" th:field="*{fullname}" th:value="*{fullname}">
         <div class="form-group mb-3">
             <label for="hour">Hour :</label> <br>
             <select class="form-control col-md-12" id="hour" th:field="*{hour}"  name="hour">

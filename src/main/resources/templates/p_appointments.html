@@ -38,7 +38,7 @@
         </li>
         <div align="right">
           <li class="nav-item">
-            <a class="nav-link"href="/logout">medical files</a>
+            <a class="nav-link"href="/logout">logout</a>
           </li>
         </div>
       </ul>
@@ -55,6 +55,8 @@
     <thead>
     <tr>
       <th>ID</th>
+      <th>Full Name</th>
+      <th>Cabine Name</th>
       <th>hour</th>
       <th>minute</th>
       <th>day</th>
@@ -67,6 +69,8 @@
     <tbody>
     <tr th:each="appointment : ${appointments}">
       <td th:text="${appointment.patientId}">id</td>
+      <td th:text="${appointment.fullname}">id</td>
+      <td th:text="${appointment.cabinename}">id</td>
       <td th:text="${appointment.hour}">id</td>
       <td th:text="${appointment.minute}">id</td>
       <td th:text="${appointment.day}">id</td>
@@ -88,6 +92,8 @@
     <thead>
     <tr>
       <th>ID</th>
+      <th>Full Name</th>
+      <th>Cabine Name</th>
       <th>hour</th>
       <th>minute</th>
       <th>day</th>
@@ -99,6 +105,8 @@
     <tbody>
     <tr th:each="appointment : ${request}">
       <td th:text="${appointment.patientId}">id</td>
+      <td th:text="${appointment.fullname}">id</td>
+      <td th:text="${appointment.cabinename}">id</td>
       <td th:text="${appointment.hour}">id</td>
       <td th:text="${appointment.minute}">id</td>
       <td th:text="${appointment.day}">id</td>
@@ -117,6 +125,8 @@
     <thead>
     <tr>
       <th>ID</th>
+      <th>Full Name</th>
+      <th>Cabine Name</th>
       <th>hour</th>
       <th>minute</th>
       <th>day</th>
@@ -127,6 +137,8 @@
     <tbody>
     <tr th:each="appointment : ${toBeChanged}">
       <td th:text="${appointment.patientId}">id</td>
+      <td th:text="${appointment.fullname}">id</td>
+      <td th:text="${appointment.cabinename}">id</td>
       <td th:text="${appointment.hour}">id</td>
       <td th:text="${appointment.minute}">id</td>
       <td th:text="${appointment.day}">id</td>
@@ -142,6 +154,8 @@
     <thead>
     <tr>
       <th>ID</th>
+      <th>Full Name</th>
+      <th>Cabine Name</th>
       <th>hour</th>
       <th>minute</th>
       <th>day</th>
@@ -152,6 +166,8 @@
     <tbody>
     <tr th:each="appointment : ${history}">
       <td th:text="${appointment.patientId}">id</td>
+      <td th:text="${appointment.fullname}">id</td>
+      <td th:text="${appointment.cabinename}">id</td>
       <td th:text="${appointment.hour}">id</td>
       <td th:text="${appointment.minute}">id</td>
       <td th:text="${appointment.day}">id</td>

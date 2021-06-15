@@ -11,6 +11,8 @@ public class Appointments {
     private long id;
     private long cabinId;
     private long patientId;
+    private String fullname;
+    private String cabinename;
     private int hour;
     private int minute;
     private int day;
@@ -21,10 +23,12 @@ public class Appointments {
     private int history;//if 1 it means deleted and should be added to history if 0 the oposite
     private int request;//if 1 it's a request of an opointment if 0 the oposite
 
-    public Appointments(long id, long cabinId, long patientId, int hour, int minute, int day, int month, int year, int newOpointement, int toUpdate, int history, int request) {
+    public Appointments(long id, long cabinId, long patientId,String fullname,String cabinename,int hour, int minute, int day, int month, int year, int newOpointement, int toUpdate, int history, int request) {
         this.id = id;
         this.cabinId = cabinId;
         this.patientId = patientId;
+        this.fullname = fullname;
+        this.cabinename = cabinename;
         this.hour = hour;
         this.minute = minute;
         this.day = day;
@@ -125,6 +129,8 @@ public class Appointments {
                 "id=" + id +
                 ", cabinId=" + cabinId +
                 ", patientId=" + patientId +
+                ", fullname=" + fullname +
+                ", cabinename=" + cabinename +
                 ", day=" + day +
                 ", month=" + month +
                 ", year=" + year +
@@ -149,6 +155,22 @@ public class Appointments {
 
     public void setHour(int hour) {
         this.hour = hour;
+    }
+
+    public String getFullname() {
+        return fullname;
+    }
+
+    public void setFullname(String fullname) {
+        this.fullname = fullname;
+    }
+
+    public String getCabinename() {
+        return cabinename;
+    }
+
+    public void setCabinename(String cabinename) {
+        this.cabinename = cabinename;
     }
 }
 
