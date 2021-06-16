@@ -1,0 +1,249 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: 'poppins';
+}
+/*  Start Continer reules*/
+.continer{
+    width: 100%;
+    height:100vh;
+    display: flex;
+    transition: 0.5s ease-in-out;
+}
+/* Start left side rules*/
+.continer .left-side{
+    flex-basis:45%;
+    background-image: url('../Images/Tracé\ 54.png');
+    background-size: cover;
+    position: relative;
+
+}
+.continer .left-side .logo{
+    display: flex;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+.continer .left-side .logo img{
+    width: 50px;
+}
+.continer .left-side .logo h1{
+    font-size: 30px;
+    background-color:#fff;
+    background-image: linear-gradient(to left, #61d4f7 0%,#fff);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color:transparent;
+    margin-top: 10px;
+}
+.continer .left-side .image{
+    
+    
+}
+.continer .left-side .image img{
+    position: absolute;
+    bottom: 70px;
+    right:60px;
+    width: 400px;
+    height:400px;
+}
+.continer .left-side  .logout {
+ 
+}
+.continer .left-side  .logout img{
+    width: 40px;
+    height:40px;
+    position: absolute;
+    bottom: 30px;
+    left:70px;
+}
+/*End left side reules*/
+/*Start right side reules*/
+.continer .right-side{
+   flex-basis: 55%;
+   position: relative;
+   
+}
+.continer .right-side .menu{
+    position: fixed;
+    top:15px;
+    right:30px;
+   
+
+}
+.continer .right-side .menu button {
+    font-size: 1rem;
+    background-color: #0090FF;
+    padding:14px 32px;
+    border:none;
+    color:#fff;
+    cursor: pointer;
+    margin-top: 1.2rem;
+    position: relative;
+    transition: all 0.35s ;
+    outline:none;
+    border-radius: 4px;
+    margin-left:-110px;
+    width: 130px;
+    height: 40px;
+    position: absolute;
+    top:0px;
+    right:15px;
+
+}
+.continer .right-side .menu button a{
+    color:#fff;
+    position: relative;
+    z-index: 2;
+    text-decoration: none;
+
+}
+.continer .right-side .menu img{
+    width: 40px;
+    padding: 2px ;
+    z-index: 2;
+   
+}
+
+
+
+.continer .right-side .main-content{
+   margin: 20px;
+   display: flex;
+   flex-direction: column;
+   position: relative;
+
+}
+.continer .right-side .main-content h1{
+    position: absolute;
+    top:100px;
+    left:90px;
+    font-size: 2.6rem;
+    font-family: poppins;
+    background-color:#0090FF;
+    background-image: linear-gradient(to top, #61d4f7 0%,#6b51fe);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color:transparent;
+
+}
+.continer .right-side .main-content form{
+    position: absolute;
+    top:260px;
+    left:60px;
+    display: flex;
+    flex-direction: column;
+}
+.continer .right-side .main-content form input{
+    width: 350px;
+    height:40px;
+    margin:20px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 2px 2px  8px #ccc;
+    outline: none;
+    padding: 5px;
+    color:#707070;
+}
+.continer .right-side .main-content form button{
+    font-size: 1rem;
+    background-image: linear-gradient(to left, #61d4f7 0%,#6b51fe);
+    border:none;
+    color:#fff;
+    cursor: pointer;
+    margin-top: 1.2rem;
+    position: relative;
+    transition: all 0.35s ;
+    outline:none;
+    border-radius: 4px;
+    margin-left:-110px;
+    width: 150px;
+    height: 40px;
+    position: absolute;
+    top:150px;
+    right:15px;
+    width:350px;
+    height:40px;
+
+}
+.continer button a{
+    color:#fff;
+    position: relative;
+    z-index: 2;
+    text-decoration: none;
+}
+.continer .right-side .main-content form button a:hover{
+   
+}
+.continer  button:after{
+    content: '';
+    border-radius: 4px;
+    background-image: linear-gradient(to left, #61d4f7 0%,#6b51fe);
+    position: absolute;
+    top:0;
+    left:0;
+    width: 0;
+    height:100%;
+    transition: all 0.35s
+
+}
+.continer  button:hover:after{
+    width:100%;
+    color:#fff;
+}
+.continer .right-side .main-content  #psf{
+    margin-top: 70px;
+    margin-left: 30px;
+    font-size: 18px;
+    color:#707070;
+    text-decoration: none;
+    display: flex;
+}
+
+.continer .right-side .main-content .social-media{
+    display:flex;
+    position: absolute;
+    top:200px;
+    right:30px;
+    flex-direction: column;
+}
+.continer .right-side .main-content .social-media a{
+    width:40px;
+    height:40px;
+    text-align: center;
+    text-decoration: none;
+    color:#000;
+    box-shadow: 0 0 20px rgba(0,0,0,0.05);
+    margin:30px 0;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+}
+.continer .right-side .main-content .social-media a .fab{
+    font-size: 15px;
+    line-height: 40px;
+    position: relative;
+    z-index: 10;
+    transition: color 0.5s;
+}
+.continer .right-side .main-content .social-media a::after{
+    content: '';
+    width: 100%;
+    height:100%;
+    transition: 0.5s;
+    
+    top:-90px;
+    left:0;
+    position: absolute;
+    background-image: linear-gradient(-45deg ,#61d4f7 ,#6b51fe);
+}
+.continer .right-side .main-content .social-media a:hover:after{
+    top:0px;
+}
+.continer .right-side .main-content .social-media a:hover .fab{
+    color:#fff;
+}

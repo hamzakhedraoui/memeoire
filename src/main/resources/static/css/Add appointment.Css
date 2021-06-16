@@ -1,0 +1,218 @@
+
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+/*Start continer Rules*/
+.continer{
+    width:100%;
+    height:100vh;
+    display: flex;
+}
+/*Start Sidbar Rules*/
+.continer  .sidbar{
+    display: flex;
+    flex-direction: column;
+    background-color: #0090FF;
+    flex-basis: 15%;
+}
+.continer  .sidbar .logo{
+    display: flex;
+    height: 10%;
+} 
+.continer  .sidbar .logo img{
+    width: 50px;
+}
+.continer  .sidbar .logo h1{
+    background-color:#fff;
+    background-image: linear-gradient(to left, #61d4f7 0%,#fff);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color:transparent;
+    margin-top: 18px;
+}
+.continer  .sidbar .liste-menu{
+    margin-left: 30px;
+    margin-top: 50px;
+    
+}
+.continer  .sidbar .liste-menu ul{
+    display: flex;
+    flex-direction: column;
+    margin-top:20px
+    
+}
+.continer  .sidbar .liste-menu ul li{
+    list-style: none;
+    margin-bottom: 30px;
+    font-size: 18px;
+
+}
+.continer  .sidbar .liste-menu ul li a{
+    text-decoration: none;
+    color:rgba(255, 255, 255, 0.596);
+    
+}
+.continer  .sidbar .liste-menu ul li  a.active{
+    color:#fff;
+    margin-right: 10px;
+}
+.continer .main-content{
+    width: 85%;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+}
+.continer .main-content .head{
+    width: 100%;
+    height:10%;
+    display: flex;
+    position: relative;
+    padding: 30px;
+    padding-bottom: 5px;
+    
+}
+.continer .main-content .head .left{
+    display: flex;
+    color:#707070;
+    border-bottom: 2px solid #0090FF;
+    
+}
+.continer .main-content .head .left i{
+   font-size: 25px;
+   margin-right: 10px;
+}
+
+.continer .main-content .head .icons{
+    position: absolute;
+    top:30px;
+    right:20px;
+}
+.continer .main-content .head .icons ul{
+
+    display: flex;
+}
+.continer .main-content .head .icons ul li{
+    list-style: none;
+    margin-left: 20px;
+}
+.continer .main-content .head .icons ul li a{
+    display: flex;
+    text-decoration: none;
+    color:#0090FF;
+}
+.continer .main-content .head .icons ul li a i{
+    padding-right: 5px;
+}
+.continer .main-content .New{
+    width: 90%;
+    display: flex;
+    height: 100%;
+    margin: 10px 50px;
+    position: relative;
+}
+.continer .main-content .New .left{
+    flex-basis: 50%;
+    height: 100%;
+   
+  
+    height:80%;
+   
+}
+.continer .main-content .New .left form{
+    width: 65%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    margin-top:60px;
+    box-shadow: 2px 5px 20px rgba(119,119,119,.5);
+   margin-left: 90px;
+    padding-top: 20px;
+}
+.continer .main-content .New .left form input{
+   width: 90%;
+   height:40px;
+   border:none;
+   border-bottom: 1px solid #0090FF;
+   padding: 8px;
+   margin-bottom: 20px;
+   margin-left: 20px;
+   outline:none;
+}
+.continer .main-content .New .left form button{
+   
+    background-color: #0090FF;
+    padding:14px 32px;
+    border:none;
+    color:#fff;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.35s ;
+    outline:none;
+    border-radius: 4px;
+    margin-left: 20px;
+    margin-top: 15px;
+    width: 90%;
+    height: 40px;
+}
+.continer .main-content .New .left form  button:after{
+    content: '';
+    border-radius: 4px;
+    background-image: linear-gradient(to left, #61d4f7 0%,#6b51fe);
+    position: absolute;
+    top:0;
+    left:0;
+    width: 0;
+    height:100%;
+    transition: all 0.35s
+}
+.continer .main-content .New .left form  button:hover:after{
+    width:100%;
+    color:#fff;
+}
+.continer .main-content .New .left form button a{
+    color:#fff;
+    position: relative;
+    z-index: 2;
+    text-decoration: none;
+}
+.continer .main-content .New .right{
+    flex-basis:50% ;
+    height: 100%;
+    position: relative;
+}
+.continer .main-content .New .right #calendar{
+    margin-right: 30px;
+}
+
+
+     .footer{
+         margin-top:100px;
+        text-align:center;
+        color:#ccc;
+        font:bold 14px Arial
+    }
+    .footer a
+    {color:#999;
+        text-decoration:none
+    }
+    #wrapper{
+        padding: 50px 0 0 325px;
+    }
+    #calendar
+    {margin:25px auto; width: 370px;
+    }
+  
+    .continer .main-content .New .right img{
+        width: 100%;
+        height:80%;
+        float: right;
+        margin-top: 130px;
+       
+    }
+
+ 
+  

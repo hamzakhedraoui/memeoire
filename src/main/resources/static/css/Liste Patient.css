@@ -1,0 +1,160 @@
+
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+/*Start continer Rules*/
+.continer{
+    width:100%;
+    height:100vh;
+    display: flex;
+}
+/*Start Sidbar Rules*/
+.continer  .sidbar{
+    display: flex;
+    flex-direction: column;
+    background-color: #0090FF;
+    flex-basis: 15%;
+}
+.continer  .sidbar .logo{
+    display: flex;
+    height: 10%;
+} 
+.continer  .sidbar .logo img{
+    width: 50px;
+}
+.continer  .sidbar .logo h1{
+    background-color:#fff;
+    background-image: linear-gradient(to left, #61d4f7 0%,#fff);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color:transparent;
+    margin-top: 18px;
+}
+.continer  .sidbar .liste-menu{
+    margin-left: 30px;
+    margin-top: 50px;
+    
+}
+.continer  .sidbar .liste-menu ul{
+    display: flex;
+    flex-direction: column;
+    margin-top:20px
+    
+}
+.continer  .sidbar .liste-menu ul li{
+    list-style: none;
+    margin-bottom: 30px;
+    font-size: 18px;
+
+}
+.continer  .sidbar .liste-menu ul li a{
+    text-decoration: none;
+    color:rgba(255, 255, 255, 0.596);
+    
+}
+.continer  .sidbar .liste-menu ul li  a.active{
+    color:#fff;
+    margin-right: 10px;
+}
+/*
+.continer  .sidbar .liste-menu ul li a.Active {
+}
+*/
+.continer  .sidbar .liste-menu ul li:hover a{
+    color:#fff;
+}
+.continer .main{
+    width: 75%;
+}
+.continer .main .head{
+    width: 100%;
+    display:flex;
+    padding: 30px;
+    justify-content: space-between;
+}
+.continer .main .head a {
+    padding-left: 50px;
+    display: flex;
+    text-decoration: none;
+}
+
+.continer .main .head a i{
+    width: 80px;
+    color:#0090FF;
+    margin-top: 10px;
+   
+}
+.continer .main .head a span{
+    margin-top: 10px;
+    margin-left: -50px;
+    color:#0090FF;
+    text-decoration: none;
+}
+.continer .main .head h2{
+   
+    font-family: poppins;
+    background-color:#0090FF;
+    background-image: linear-gradient(to top, #61d4f7 0%,#6b51fe);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color:transparent;
+     
+}
+
+.continer .main .search{
+    width: 100%;
+    padding-left: 30px;
+    display: flex;
+}
+
+.continer .main .search input{
+    height:30px;
+    width: 80%;
+    outline: none;
+    color:#707070;
+    border:1px solid #ccc;
+    border:none;
+    padding: 10px;
+    background-color: #b0d7f5a9;
+}
+.continer .main .search button{
+    font-size: 1rem;
+    background-color: #0090FF;
+    margin-left: -100px;
+    border:none;
+    color:#fff;
+    cursor: pointer;
+   width: 100px;
+    position: relative;
+    transition: all 0.35s ;
+    outline:none;
+    border-bottom-left-radius: 50%;
+
+      
+    text-align: center;
+
+}
+
+.continer .main .Table{
+    margin-top: 20px;
+    margin-left: 30px;
+    width: 100%;
+	border-collapse: collapse;
+}
+.continer .main .Table td, .continer .main .Table th{
+    padding:12px 15px;
+    border:1px solid #ddd;
+    text-align: center;
+    font-size:16px;
+    color:#707070;
+}
+
+
+
+/*End Continer rules*/

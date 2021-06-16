@@ -1,0 +1,130 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+body{
+    overflow: hidden;
+}
+.continer{
+    background:#fff;
+    width: 740px;
+    height:650px;
+    margin:0 auto;
+    position: relative;
+    margin-top: 5%;
+    box-shadow: 2px 5px 20px rgba(119,119,119,.5);
+}
+/*Start let side rules*/
+.continer .left-side{
+    float: left;
+    top:-5%;
+    left:5%;
+    position: absolute;
+    width: 12%;
+    height:110%;
+    background: #0090FF;
+    box-shadow: 3px 3px 10px rgba(119,119,119,.5);
+    border: 0.1em solid #fff;
+}
+.continer .left-side nav {
+    padding-top: 70px;
+}
+.continer .left-side nav a{
+    list-style: none;
+    color:#fff;
+    padding:35px;
+    font-size: 1.1em;
+    display:block;
+    transition: all .3s ease-in-out;
+    
+}
+.continer .left-side nav a:hover{
+    color:#707070;
+    cursor: pointer;
+    transform: scale(1.2);
+}
+.continer .left-side nav a:first-child{
+    margin-top: 7px;
+}
+.continer .right-side{
+   width: 60%;
+   margin-left: 27%;
+}
+.continer .right-side .profile-tabshow{
+    transition: all .5s ease-in;
+    width: 80%;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+}
+.continer .right-side .profile-tabshow h1{
+    color:#0090FF;
+    font-family: sans-serif;
+    font-size:2rem;
+    margin-top: 70px;
+    margin-bottom: 35px;
+    padding-top:40px;
+}
+.continer .right-side .profile-tabshow h2{
+    color:#777;
+    font-family: 'Roboto',sans-serif;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-left: 2px;
+    margin-top:10px;
+    padding-bottom: 10px;
+    
+}
+.continer .right-side .profile-tabshow input{
+    border:none;
+    border-bottom: 1px solid #61d4f7 ;
+    width: 90%;
+    font-family: sans-serif;
+    font-size: .7em;
+    padding: 7px 0;
+    color:#707070;
+    outline: none;
+
+}
+
+.continer .right-side .profile-tabshow button{
+    font-size: 1rem;
+    background-color: #0090FF;
+    padding:14px 32px;
+    border:none;
+    color:#fff;
+    cursor: pointer;
+    margin-top: 1.2rem;
+    position: relative;
+    transition: all 0.35s ;
+    outline:none;
+    border-radius: 4px;
+    margin-left:-110px;
+    width: 130px;
+    height: 40px;
+    margin-left:0px;
+    
+}
+.continer .right-side .profile-tabshow button a{
+    color:#fff;
+    position: relative;
+    z-index: 2;
+    text-decoration: none;
+}
+.continer .right-side .profile-tabshow button:after{
+    content: '';
+    border-radius: 4px;
+    background-image: linear-gradient(to left, #61d4f7 0%,#6b51fe);
+    position: absolute;
+    top:0;
+    left:0;
+    width: 0;
+    height:100%;
+    transition: all 0.35s
+}
+.continer .right-side .profile-tabshow button:hover:after{
+    width:100%;
+    color:#fff;
+}

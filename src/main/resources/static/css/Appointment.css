@@ -1,0 +1,230 @@
+
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+/*Start continer Rules*/
+.continer{
+    width:100%;
+    height:100vh;
+    display: flex;
+}
+/*Start Sidbar Rules*/
+.continer  .sidbar{
+    display: flex;
+    flex-direction: column;
+    background-color: #0090FF;
+    flex-basis: 15%;
+}
+.continer  .sidbar .logo{
+    display: flex;
+    height: 10%;
+} 
+.continer  .sidbar .logo img{
+    width: 50px;
+}
+.continer  .sidbar .logo h1{
+    background-color:#fff;
+    background-image: linear-gradient(to left, #61d4f7 0%,#fff);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color:transparent;
+    margin-top: 18px;
+}
+.continer  .sidbar .liste-menu{
+    margin-left: 30px;
+    margin-top: 50px;
+    
+}
+.continer  .sidbar .liste-menu ul{
+    display: flex;
+    flex-direction: column;
+    margin-top:20px
+    
+}
+.continer  .sidbar .liste-menu ul li{
+    list-style: none;
+    margin-bottom: 30px;
+    font-size: 18px;
+
+}
+.continer  .sidbar .liste-menu ul li a{
+    text-decoration: none;
+    color:rgba(255, 255, 255, 0.596);
+    
+}
+.continer  .sidbar .liste-menu ul li  a.active{
+    color:#fff;
+    margin-right: 10px;
+}
+/*
+.continer  .sidbar .liste-menu ul li a.Active {
+}
+*/
+.continer  .sidbar .liste-menu ul li:hover a{
+    color:#fff;
+}
+
+/*End sidbar Rules*/
+/*Start sidbar Rules*/
+.continer .main-content{
+    flex-basis: 85%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    
+}
+.continer .main-content .header{
+    display: flex;
+    border-bottom: 1px solid #ccc;
+    height: 10%;
+    width: 100%;
+}
+.continer .main-content .header .search-bar{
+    display: flex;
+}
+.continer .main-content .header .search-bar img{
+    width: 25px;
+    height:25px;
+    margin-left: 30px;
+    margin-top: 15px;
+    position: relative;
+    
+}
+.continer .main-content .header .search-bar input{
+    width: 400px;
+    height:30px;
+    outline: none;
+    margin-top: 16px;
+    border:none;
+    color:rgba(204, 204, 204, 0.685);
+    margin-left: 10px;
+    
+}
+.continer .main-content .header .user-info{
+    display: flex;
+    position: absolute;
+    right:20px;
+    top:10px;
+}
+.continer .main-content .header .user-info h1{
+    font-size: 12px;
+    margin-top: 15px;
+    margin-right: 10px;
+}
+.continer .main-content .header .user-info img{
+    width: 40px;
+    height:40px;
+}
+.continer .main-content .main .app{
+    display: flex;
+    width: 100%;
+    position: relative;
+}
+.continer .main-content .main .app h2{
+    margin-left: 20px;
+    font-family: poppins;
+    background-color:#0090FF;
+    background-image: linear-gradient(to top, #61d4f7 0%,#6b51fe);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color:transparent;
+    padding-bottom: 10px;
+    padding-top:10px;
+    
+}
+.continer .main-content .main .app ul{
+    display: flex;
+    list-style: none;
+    position: absolute;
+    top:20px;
+    right: 20px;
+}
+.continer .main-content .main .app ul li{ 
+    margin-right: 20px;
+}
+.continer .main-content .main .app ul li a{
+    text-decoration: none;
+    color:#0090FF;
+}
+.continer .main-content .main .app  .point:hover{
+  
+}
+
+.continer .main-content .Table{
+    margin-top: 30px;
+    margin-left: 20px;
+    width: 80%;
+	border-collapse: collapse;
+}
+.continer .main-content  .Table td, .continer .main-content .Table th{
+    padding:12px 15px;
+    border:1px solid #ddd;
+    text-align: center;
+    font-size:16px;
+}
+.Table th{
+    background-color: #0090FF;
+    color:#fff;
+}
+.Table tbody tr:nth-child(even){
+	background-color: #f5f5f5;
+}
+.Table a{
+
+    color:#0090FF;
+}
+
+@media(max-width: 500px){
+	.Table thead{
+		display: none;
+	}
+
+	.Table, .Table tbody, .Table tr, .Table td{
+		display: block;
+		width: 100%;
+	}
+	.Table tr{
+		margin-bottom:15px;
+	}
+	.Table td{
+		text-align: right;
+		padding-left: 50%;
+		text-align: right;
+		position: relative;
+	}
+	.Table td::before{
+		content: attr(data-label);
+		position: absolute;
+		left:0;
+		width: 50%;
+		padding-left:15px;
+		font-size:15px;
+		font-weight: bold;
+		text-align: left;
+	}
+}
+.continer .main-content .main button{
+    margin-left: 20px;
+     padding :10px 20px;
+    font-size: 1rem;
+    background-image: linear-gradient(to left, #61d4f7 0%,#6b51fe);
+    border:none;
+    color:#fff;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.35s ;
+    outline:none;
+    border-radius: 4px;
+    margin-top: 20px;
+     
+
+}
+
+
+

@@ -1,0 +1,387 @@
+
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+    
+}
+/*Start continer Rules*/
+.continer{
+    width:100%;
+    height:100vh;
+    display: flex;
+}
+/*Start Sidbar Rules*/
+.continer  .sidbar{
+    display: flex;
+    flex-direction: column;
+    background-color: #0090FF;
+    flex-basis: 15%;
+}
+.continer  .sidbar .logo{
+    display: flex;
+    height: 10%;
+} 
+.continer  .sidbar .logo img{
+    width: 50px;
+}
+.continer  .sidbar .logo h1{
+    background-color:#fff;
+    background-image: linear-gradient(to left, #61d4f7 0%,#fff);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color:transparent;
+    margin-top: 18px;
+}
+.continer  .sidbar .liste-menu{
+    margin-left: 30px;
+    margin-top: 50px;
+    
+}
+.continer  .sidbar .liste-menu ul{
+    display: flex;
+    flex-direction: column;
+    margin-top:20px
+    
+}
+.continer  .sidbar .liste-menu ul li{
+    list-style: none;
+    margin-bottom: 30px;
+    font-size: 18px;
+
+}
+.continer  .sidbar .liste-menu ul li a{
+    text-decoration: none;
+    color:rgba(255, 255, 255, 0.596);
+    
+}
+.continer  .sidbar .liste-menu ul li  a.active{
+    color:#fff;
+    margin-right: 10px;
+}
+/*
+.continer  .sidbar .liste-menu ul li a.Active {
+}
+*/
+.continer  .sidbar .liste-menu ul li:hover a{
+    color:#fff;
+}
+
+/*End sidbar Rules*/
+/*Start sidbar Rules*/
+.continer .main-content{
+    flex-basis: 85%;
+    display: flex;
+    background-color:#E7F5F7;
+    height: 100%;
+    
+}
+.continer .main-content .left-side{
+    flex-basis: 35%;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.continer .main-content .left-side .infoUser{
+    background-color:#fff;
+    width: 70%;
+    height:200px;
+    margin-top: 50px;
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+}
+.continer .main-content .left-side .infoUser img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-top: -20px;
+    box-shadow: 2px 5px 20px rgba(119,119,119,.5);
+    
+}
+.continer .main-content .left-side .infoUser h2{
+    font-size: 18px;
+    color:#707070;
+    padding-top: 10px;
+    padding-bottom: 8px;
+}
+.continer .main-content .left-side .infoUser span{
+    color:#ccc;
+    letter-spacing: 1.1px;
+}
+.continer .main-content .left-side .infoUser .info{
+    display: flex;
+    width: 95%;
+    justify-content: space-around;
+}
+.continer .main-content .left-side .infoUser .info div{
+    padding: 10px;
+}
+.continer .main-content .left-side .infoUser .info  h3{
+    font-weight: 100;
+    color:#0090FF;
+    padding-bottom: 8px;
+    font-size: 14px;
+}
+.continer .main-content .left-side .infoUser .info span{
+    color:#707070;
+    font-size: 20px;
+    font-weight: bold;
+    
+}
+.continer .main-content .left-side .ntf{
+    display: flex;
+    padding-top: 15px;
+}
+.continer .main-content .left-side  .ntf h2{
+    color:#0090FF;
+    font-weight: 100;
+    font-size: 18px;
+    
+    padding-right: 80px;
+    
+}
+.continer .main-content .left-side  .ntf span{
+    color:#ccc;
+    
+}
+.continer .main-content .left-side .notification{
+    width: 70%;
+    height:310px;
+    background-color: #fff;
+    border-radius: 8px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.continer .main-content .left-side .notification .top{
+    flex-basis: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+.continer .main-content .left-side .notification .top i{
+    width: 8px;
+    color:#0090FF;
+    margin-top: 5px;
+    
+}
+.continer .main-content .left-side .notification .top h3{
+    margin-right: 120px;
+    color:#4d4c4c;
+}
+.continer .main-content .left-side .notification .days{
+    justify-content: space-around;
+    display: flex;
+    flex-basis: 70%;
+    color:#0090FF;
+    margin-top: 20px;
+    margin-left: -10px;
+}
+.continer .main-content .left-side .notification p{
+    color:rgb(141, 138, 138);
+    margin-left: 10px;
+    margin-top: 10px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #E7F5F7;
+}
+.continer .main-content .left-side .notification .bottom{
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+}
+.continer .main-content .left-side .notification .bottom .doctorinfo{
+    display: flex;
+    padding: 10px;
+}
+.continer .main-content .left-side .notification .bottom .doctorinfo img{
+    width: 50px;
+    height:50px;
+    border-radius: 50%;
+    box-shadow: 2px 5px 20px rgba(119,119,119,.5);
+
+}
+.continer .main-content .left-side .notification .bottom .doctorinfo .infoD{
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+}
+.continer .main-content .left-side .notification .bottom .doctorinfo .infoD h3{
+    font-weight: 100;
+    color:#2c2c2c;
+    padding-bottom: 8px;
+}
+.continer .main-content .left-side .notification .bottom .doctorinfo .infoD span{
+    color:#ccc;
+}
+.continer .main-content .left-side .notification .bottom  .specialty{
+    padding: 10px;
+    margin-left: 10px;
+    letter-spacing: 1px;
+}
+.continer .main-content .left-side .notification .bottom  .specialty h4{
+    color:#2c2c2c;
+    font-size: 20px;
+}
+.continer .main-content .left-side .notification .bottom .specialty span{
+    color:rgb(119, 117, 117);
+}
+.continer .main-content .left-side .notification .bottom .rdv{
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    padding: 5px;
+    margin-left: 12px;
+}
+.continer .main-content .left-side .notification .bottom .rdv h5{
+    color:#0090FF;
+}
+.continer .main-content .left-side .notification .bottom .rdv span{
+    color:#707070;
+}
+.continer .main-content .right-side{
+    flex-basis: 65%;
+    height: 100%;
+    background-color: #fff;
+    
+    border-top-left-radius: 10%;
+    
+    display: flex;
+    flex-direction: column;
+    
+}
+.continer .main-content .right-side .examination{
+    padding:50px 30px 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.continer .main-content .right-side .examination h2{
+    font-size: 30px;
+    color:#6DC3CC;
+    font-weight: 100;
+}
+.continer .main-content .right-side .examination span{
+    color:#61d4f7;
+    
+}
+.continer .main-content .right-side .examination span i{
+    padding: 10px;
+    
+    background: #E7F5F7;
+    border-radius: 10px;
+}
+.continer .main-content .right-side .exinfo{
+    padding-left: 30px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+.continer .main-content .right-side .exinfo .ex div:first-of-type{
+    width: 10px;
+    height:100px;
+    border-radius: 10px;
+    transform: rotate(180deg);
+    background-image: linear-gradient(to top,  #ebf6f7 0%,#61d4f7 100%);
+}
+.continer .main-content .right-side .exinfo .ex  .ex1{
+    margin-left: 5px;
+    margin-top: -100px;
+    padding: 10px 20px ;
+}
+.continer .main-content .right-side .exinfo .ex  .ex1 h2{
+    font-size: 18px; 
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color:#2c2c2c;
+    
+}
+.continer .main-content .right-side .exinfo .ex  .ex1 span{
+    color:#ccc;
+    font-size: 16px;
+    font-weight: 100;
+}
+.continer .main-content .right-side .exinfo .ex  .ex1 i{
+    color:#FDA496;
+    margin-left: 150px;
+}
+.continer .main-content .right-side .curve{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+.continer .main-content .right-side .curve .curvedays{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+.continer .main-content .right-side .curve .curvedays h2{
+    font-size: 30px;
+    color:#6DC3CC;
+    font-weight: 100;
+    
+}
+.continer .main-content .right-side .curve .curvedays .days{
+    flex-basis: 60%;
+    position: absolute;
+    right:10px;
+    top:15px;
+
+}
+.continer .main-content .right-side .curve .curvedays .days span{
+    padding: 12px;
+    border-radius: 10px;
+    background-color: #E7F5F7;
+    margin-right: 10px;
+    font-size:18px ;
+    color:#6DC3CC;
+}
+.continer .main-content .right-side .curve .curvedays .days  .active{
+    color:#fff;
+    background-color:#6DC3CC ;
+}
+.continer .main-content .right-side .curve .curvedays .days span:hover{
+    color:#fff;
+    background-color:#6DC3CC ;
+    transition: all 0.3s ease;
+}
+.continer .main-content .right-side .curve .point {
+    padding-top: 20px;
+    display: flex;
+    margin-left: 20px;
+}
+.continer .main-content .right-side .curve .point div{
+    margin-right: 30px;
+}
+.continer .main-content .right-side .curve .point span{
+    color:#4d4c4c;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+

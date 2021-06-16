@@ -1,0 +1,384 @@
+
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+/*Start continer Rules*/
+.continer{
+    width:100%;
+    height:100vh;
+    display: flex;
+}
+/*Start Sidbar Rules*/
+.continer  .sidbar{
+    display: flex;
+    flex-direction: column;
+    background-color: #0090FF;
+    flex-basis: 15%;
+}
+.continer  .sidbar .logo{
+    display: flex;
+    height: 10%;
+} 
+.continer  .sidbar .logo img{
+    width: 50px;
+}
+.continer  .sidbar .logo h1{
+    background-color:#fff;
+    background-image: linear-gradient(to left, #61d4f7 0%,#fff);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color:transparent;
+    margin-top: 18px;
+}
+.continer  .sidbar .liste-menu{
+    margin-left: 30px;
+    margin-top: 50px;
+    
+}
+.continer  .sidbar .liste-menu ul{
+    display: flex;
+    flex-direction: column;
+    margin-top:20px
+    
+}
+.continer  .sidbar .liste-menu ul li{
+    list-style: none;
+    margin-bottom: 30px;
+    font-size: 18px;
+   
+
+}
+.continer  .sidbar .liste-menu ul li a{
+    text-decoration: none;
+    color:rgba(255, 255, 255, 0.596);
+    
+}
+.continer  .sidbar .liste-menu ul li  a.active{
+    color:#fff;
+    margin-right: 10px;
+}
+.continer .main{
+    flex-basis: 85%;
+    height:100%;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+}
+.continer .main .head{
+    display: flex;
+    height:10%;
+    
+}
+.continer .main .left{
+    flex-basis: 40%;
+    height: 100%;
+    display: flex;
+    position: absolute;
+    top:20px;
+    left:20px;
+    color:#707070;
+}
+.continer .main .left i{
+
+    font-size: 18px;
+    margin-right: 10px;
+}
+.continer .main .left h2{
+    font-size: 18px;
+    font-weight: 100;
+
+}
+.continer .main .head .right{
+    flex-basis: 60%;
+    height:100%;
+    position: absolute;
+    top:15px;
+    right:20px;
+    
+}
+.continer .main .head .right ul{
+display: flex;
+}
+.continer .main .head .right ul li{
+    list-style: none;
+    color:#0090FF;
+    padding-right: 10px;
+}
+.continer .main .head .right ul li .img{
+    display: flex;
+}
+.continer .main .head .right ul li i{
+    padding-top: 10px;
+    margin-left: 10px;
+    
+}
+.continer .main .head .right ul li .img img{
+    width: 40px;
+    height:40px;
+    border-radius: 50%;
+}
+.continer .main .head .right ul li .img span{
+    color:#000;
+    padding-top:10px;
+    margin-left: 10px;
+}
+.continer .main  .main-content{
+    width: 100%;
+    height:90%;
+    background-color: #E7F5F7;
+    display: flex;
+    flex-direction: column;
+    
+}
+.continer .main  .main-content .wlc{
+    width: 100%;
+    height:10%;
+    display: flex;
+    position: relative;
+}
+.continer .main  .main-content .wlc .left-wlc{
+    position: absolute;
+    top:5px;
+    left:20px;
+    
+}
+.continer .main  .main-content .wlc .left-wlc h3{
+    color:#0090FF;
+    font-weight: 100;
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+.continer .main  .main-content .wlc .left-wlc span{
+    color:#ccc;
+    
+}
+.continer .main  .main-content .wlc .right-wlc{
+    position: absolute;
+    top:15px;
+    right:20px;
+    display: flex;
+}
+.continer .main  .main-content .wlc .right-wlc input{
+    width: 220px;
+    height:30px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    padding: 10px;
+   background-color:transparent;
+    
+}
+.continer .main  .main-content .wlc .right-wlc img{
+   width: 25px;
+   height: 25px;
+   margin-left: -30px;
+   margin-top: 3px;
+}
+.continer .main  .main-content .content{
+    display:flex;
+    width: 100%;
+
+}
+
+.continer .main  .main-content .info{
+    width: 60%;
+    height: 100%;
+    padding: 20px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.continer .main  .main-content .info > div{
+     margin-bottom: 40px;
+    height:100px;
+    width: 350px;
+    border-radius: 10px;
+    color:#fff;
+    text-align: center;
+    margin-left:20px;
+    border-radius: 50%;
+   
+    
+}
+
+
+.continer .main  .main-content .info  .Patient{
+    display: flex;
+    background-image: linear-gradient(to right, #0091ffa1 , rgb(154, 240, 247)100%);
+}
+
+.continer .main  .main-content .info  .Patient .left-p{
+    padding: 10px 20px;
+    color:#fff
+}
+.continer .main  .main-content .info  .Patient .left-p span{
+    color:rgba(255, 255, 255, 0.747);
+}
+
+.continer .main  .main-content .info  .Patient .left-p > div{
+    display: flex;
+    padding: 5px 20px;
+}
+.continer .main  .main-content .info  .Patient .left-p > div h2{
+    font-size: 27px;
+    padding-top: 5px;
+}
+.continer .main  .main-content .info  .Patient .left-p  > div .icons{
+  display: flex;
+  flex-direction: column;
+  margin-left: 30px;
+  margin-top: 10px;
+}
+.continer .main  .main-content .info  .Patient .left-p  > div .icons i{
+    font-size: 16px;
+}
+.continer .main  .main-content .info  .Patient .left-p  > div .icons span{
+    font-size: 10px;
+}
+.continer .main  .main-content .info  .Patient .right-p i{
+    
+    font-size: 30px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    padding: 10px;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+.continer .main  .main-content .info  .Cabinet{
+    display: flex;
+    background-image: linear-gradient(to right, #ff3c3cec, #FA8F8B 100%);
+}
+.continer .main  .main-content .info  .Cabinet .left-c{
+    padding: 10px 20px;
+    color:#fff
+}
+.continer .main  .main-content .info  .Cabinet .left-c span{
+    color:rgba(255, 255, 255, 0.747);
+}
+.continer .main  .main-content .info  .Cabinet .left-c > div{
+    display: flex;
+    padding: 5px 20px;
+}
+.continer .main  .main-content .info  .Cabinet .left-c > div h2{
+    font-size: 27px;
+    padding-top: 5px;
+}
+.continer .main  .main-content .info  .Cabinet .left-c  > div .icons{
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+    margin-top: 10px;
+  }
+  .continer .main  .main-content .info  .Catient .left-c  > div .icons i{
+    font-size: 16px;
+}
+.continer .main  .main-content .info  .Cabinet .left-c  > div .icons span{
+    font-size: 10px;
+}
+.continer .main  .main-content .info  .Cabinet .right-c i{
+    
+    font-size: 30px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    padding: 10px;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 60px;
+}
+
+.continer .main  .main-content .info  .Appointment{
+    display: flex;
+    background-image: linear-gradient(to right, #80EA7B, #5AD870 100%);
+}
+.continer .main  .main-content .info  .Appointment .left-c{
+    padding: 10px 20px;
+    color:#fff
+}
+.continer .main  .main-content .info  .Appointment .left-c span{
+    color:rgba(255, 255, 255, 0.747);
+}
+.continer .main  .main-content .info  .Appointment .left-c > div{
+    display: flex;
+    padding: 5px 20px;
+}
+.continer .main  .main-content .info  .Appointment.left-c > div h2{
+    font-size: 27px;
+    padding-top: 10px;
+}
+.continer .main  .main-content .info  .Appointment .left-c  > div .icons{
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+    margin-top: 10px;
+  }
+  .continer .main  .main-content .info  .Appointment .left-c  > div .icons i{
+    font-size: 16px;
+}
+.continer .main  .main-content .info  .Appointment .left-c  > div .icons span{
+    font-size: 10px;
+}
+.continer .main  .main-content .info  .Appointment .right-c i{
+    
+    font-size: 30px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    padding: 10px;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 50px;
+}
+.continer .main  .main-content .secretaire{
+    width: 40%;
+    display: flex;
+    height:100%;
+}
+.continer .main  .main-content .secretaire .profile{
+    flex-basis: 100%;
+    background-color: #fff;
+    margin: 11px 40px;
+    height:90%;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+}
+.continer .main  .main-content .secretaire .profile .img{
+     display: flex;
+     align-items: center;
+     flex-direction: column;
+     padding-top: 20px;
+}
+.continer .main  .main-content .secretaire .profile .img img{
+    width: 80px;
+    height:80px;
+    border-radius: 50%;
+    box-shadow: 2px 5px 20px rgba(119,119,119,.5);
+}
+.continer .main  .main-content .secretaire .profile .img h2{
+    color:#707070;
+    padding-top: 10px;
+}
+.continer .main  .main-content .secretaire .profile .infoS{
+   padding: 10px 30px;
+}
+.continer .main  .main-content .secretaire .profile .infoS label{
+    padding-right: 10px;
+   
+}
+.continer .main  .main-content .secretaire .profile .infoS input{
+    width:59%;
+    outline: none;
+    border: none;
+}
+.continer .main  .main-content .secretaire .profile .infoS textarea{
+    width: 50%;
+    height: 60px;
+}
+
+
+
+
