@@ -235,11 +235,6 @@ public class PatientController {
                 request.add(app);
             }
         }
-        System.out.println("request = "+request);
-        System.out.println("to be changed = "+toBeChanged);
-        System.out.println("history = "+history);
-        System.out.println("appointments = "+myApp);
-
         model.addAttribute("history",history);
         model.addAttribute("toBeChanged",toBeChanged);
         model.addAttribute("request",request);
