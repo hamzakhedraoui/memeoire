@@ -1,0 +1,211 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+/*Start continer Rules*/
+.continer{
+    width:100%;
+    height:100vh;
+    display: flex;
+}
+/*Start Sidbar Rules*/
+.continer  .sidbar{
+    display: flex;
+    flex-direction: column;
+    background-color: #0090FF;
+    flex-basis: 15%;
+}
+.continer  .sidbar .logo{
+    display: flex;
+    height: 10%;
+} 
+.continer  .sidbar .logo img{
+    width: 50px;
+}
+.continer  .sidbar .logo h1{
+    background-color:#fff;
+    background-image: linear-gradient(to left, #61d4f7 0%,#fff);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color:transparent;
+    margin-top: 18px;
+}
+.continer  .sidbar .liste-menu{
+    margin-left: 30px;
+    margin-top: 50px;
+    
+}
+.continer  .sidbar .liste-menu ul{
+    display: flex;
+    flex-direction: column;
+    margin-top:20px
+    
+}
+.continer  .sidbar .liste-menu ul li{
+    list-style: none;
+    margin-bottom: 30px;
+    font-size: 18px;
+
+}
+.continer  .sidbar .liste-menu ul li a{
+    text-decoration: none;
+    color:rgba(255, 255, 255, 0.596);
+    
+}
+.continer  .sidbar .liste-menu ul li  a.active{
+    color:#fff;
+    margin-right: 10px;
+}
+/*
+.continer  .sidbar .liste-menu ul li a.Active {
+}
+*/
+.continer  .sidbar .liste-menu ul li:hover a{
+    color:#fff;
+}
+.continer .chat{
+
+    display:grid;
+    place-items: center;
+    width:90%;
+    height:100%;
+    background-image: linear-gradient(to left ,#fff 0%,#0090FF);
+}
+.continer .chat .chatContent{
+    display: grid;
+    grid:
+    'Search-continer Chat-title'71px
+    'Conversation-list Chat-message-liste'1fr
+    'New-messaage-list Chat-form' 78px
+    /300px 1fr
+}
+.continer .chat .content-chat {
+    width: 60%;
+    height:95%;
+    background-color:#fff;
+    box-shadow: rgba(255, 255, 255, 0.596);
+    border-radius: 10px;
+    position: relative;
+}
+.main-chat {
+    width: 100%;
+    padding: 0 15px;
+    color: #fff;
+    position: relative;
+    font-size: 0.9em;
+}
+
+.client-chat {
+    width: 60%;
+    word-wrap: break-word;
+    background-color: rgb(231, 229, 229);
+    padding: 7px 10px;
+    border-radius: 10px 10px 10px 0;
+    margin: 10px 0;
+}
+.my-chat {
+    width: 60%;
+    word-wrap: break-word;
+    background-color: #95d1ff;
+    padding: 7px 10px;
+    border-radius: 10px 10px 0 10px;
+    margin: 5px 0 5px auto;
+}
+
+.chat-input {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 65px;
+    background-color: #fff;
+    padding: 15px;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+}
+
+.chat-input input {
+    width: calc(100% - 40px);
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.596);
+    border-radius: 50px;
+    color: #202020;
+    font-size: 1.2em;
+    padding: 0 15px;
+    border:none;
+    outline: none;
+    border:1px solid #0090FF;
+}
+.send-btn {
+    width: 40px;
+    height: 40px;
+    background-color: #0090FF;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    margin-left: 5px;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+}
+.send-btn a{
+    color:#fff;
+    position: relative;
+    z-index: 2;
+    text-decoration: none;
+
+}
+.send-btn:after{
+    content: '';
+    border-radius: 4px;
+    background-image: linear-gradient(to left, #61d4f7 0%,#6b51fe);
+    position: absolute;
+    top:0;
+    left:0;
+    width: 0;
+    height:100%;
+    transition: all 0.35s
+}
+.send-btn:hover after{
+    width:100%;
+    color:#fff;
+}
+.send-btn:active {
+    transform: scale(0.85);
+}
+.send-btn img {
+    width: 100%;
+    height: 100%;
+}
+.chat-btn {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #fff;
+    cursor: pointer;
+    overflow: hidden;
+    position: fixed;
+    bottom: 20px;
+}
+.chat-btn img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 5px;
+    transition: 0.4s ease-in-out;
+}
+
+.chat-btn:hover img {
+    transform: rotate(30deg);
+}
+
+
+

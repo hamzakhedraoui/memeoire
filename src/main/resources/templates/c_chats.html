@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Chats</title>
+    <link th:href="@{/css/chat/Chats.css}" rel="stylesheet"/>
+    <script src="https://kit.fontawesome.com/0c53053c39.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div class="continer">
+    <div class="sidbar">
+        <div class="logo">
+            <img th:src="@{/Images/icons8-medical-doctor-100 (1).png}" src="../static/Images/icons8-medical-doctor-100 (1).png" alt="logo"/>
+            <!--<img src="../Images/icons8-medical-doctor-100 (1).png" alt="logo"/>-->
+            <h1>WCare</h1>
+        </div>
+        <div class="liste-menu">
+            <ul>
+                <li>
+                    <a href="../html/Dashboard.html" >
+                        <i class="fa fa-home"></i>
+                        <span> Home</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../html/consulation.html">
+                        <i class="fas fa-user-md"></i>
+                        <span> Consultations</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../html/Appointment.html" class="active">
+                        <i class="fa fa-credit-card"></i>
+                        <span> Appointments</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../html/Chats.html">
+                        <i class="far fa-envelope-open"></i>
+                        <span> Contacts</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../html/Setting.html">
+                        <i class="fa fa-cog"></i>
+                        <span> Preferences</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../html/calendar.html">
+                        <i class="far fa-calendar-check"></i>
+                        <span> scheduling appointments</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span> Log out</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="chat">
+        <div class="content-chat">
+            <div class="main-chat">
+                <div th:each="ms : ${messages}">
+                    <div th:if="${ms.sender == 0}" class="my-chat" th:text="${ms.message}"></div>
+                    <div th:if="${ms.sender == 1}" class="client-chat" th:text="${ms.message}"></div>
+                    <!--                  <div class="client-chat">How can i help you?</div>
+                                      <div class="my-chat">Can you give me same advice about.....</div>
+                                      <div class="client-chat">I will give all what you need, just give me same time to ask your doctor.</div>-->
+                </div>
+            </div>
+            <form action="#" th:action="@{/cabine/savemsg}" th:object="${msgg}"
+                  method="post" >
+                <div class="chat-input">
+                    <input type="text" th:field="*{msg}" placeholder="Enter Message" />
+                    <button type="submit" class="send-btn">
+                        Send
+                    </button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+<script src="jquery-3.4.1.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

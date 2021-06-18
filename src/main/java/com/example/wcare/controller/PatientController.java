@@ -354,4 +354,12 @@ public class PatientController {
         return null;
     }
     //***************************************************************************************************************
+    //my profile
+    @RequestMapping(value = "/patient/profile/")
+    public String myprofile(Model model,HttpSession session){
+        String account_id = (String) session.getAttribute("account");
+        Patient patient = getMyAccount(Integer.parseInt(account_id));
+        model.addAttribute("patient",patient);
+        return "profile";
+    }
 }

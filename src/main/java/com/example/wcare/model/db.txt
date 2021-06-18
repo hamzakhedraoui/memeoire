@@ -57,7 +57,7 @@ create table medical_record(
     date varchar(100),
     visible int);
 
-create table Message(
+create table message(
     id int primary key auto_increment,
     cabine_id int,
     patient_id int,
